@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-label="歯科衛生士 臨床経験 15年">
+  <defs>
+    <filter id="softShadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#403319" flood-opacity=".10"/>
+    </filter>
+    <linearGradient id="goldLine" x1="0" x2="1">
+      <stop offset="0" stop-color="#f4c93e"/>
+      <stop offset=".5" stop-color="#ffdc58"/>
+      <stop offset="1" stop-color="#d9aa34"/>
+    </linearGradient>
+    <g id="laurelSide">
+      <path d="M74 38C44 74 42 142 63 206" fill="none" stroke="#d5a236" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="70" cy="51" rx="8" ry="18" fill="#d5a236" transform="rotate(42 70 51)"/>
+      <ellipse cx="56" cy="75" rx="8" ry="18" fill="#d5a236" transform="rotate(27 56 75)"/>
+      <ellipse cx="48" cy="101" rx="8" ry="18" fill="#d5a236" transform="rotate(10 48 101)"/>
+      <ellipse cx="48" cy="128" rx="8" ry="18" fill="#d5a236" transform="rotate(-8 48 128)"/>
+      <ellipse cx="55" cy="155" rx="8" ry="18" fill="#d5a236" transform="rotate(-25 55 155)"/>
+      <ellipse cx="68" cy="181" rx="8" ry="18" fill="#d5a236" transform="rotate(-42 68 181)"/>
+    </g>
+  </defs>
+  <rect x="8" y="8" width="744" height="234" fill="#fff" stroke="#ddb45a" stroke-width="2.5" filter="url(#softShadow)"/>
+  <use href="#laurelSide"/>
+  <use href="#laurelSide" transform="translate(760 0) scale(-1 1)"/>
+  <text x="380" y="83" text-anchor="middle" font-family="'Yu Gothic','Meiryo',sans-serif" font-size="29" font-weight="800" fill="#123f60">歯科衛生士 臨床経験</text>
+  <rect x="268" y="156" width="224" height="24" fill="url(#goldLine)"/>
+  <text x="380" y="174" text-anchor="middle" font-family="Georgia,'Times New Roman','Yu Mincho',serif" font-weight="800" fill="#004b93">
+    <tspan font-size="98">15</tspan><tspan font-size="76" dx="4">年</tspan>
+  </text>
+</svg>
