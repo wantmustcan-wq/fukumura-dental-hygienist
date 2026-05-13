@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://wantmustcan-wq.github.io/fukumura-dental-hygienist/sitemap.xml
