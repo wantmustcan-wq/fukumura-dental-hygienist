@@ -8,14 +8,14 @@
       <stop offset=".5" stop-color="#ffdc58"/>
       <stop offset="1" stop-color="#d9aa34"/>
     </linearGradient>
-    <g id="laurelSide">
-      <path d="M74 38C44 74 42 142 63 206" fill="none" stroke="#d5a236" stroke-width="4" stroke-linecap="round"/>
-      <ellipse cx="70" cy="51" rx="8" ry="18" fill="#d5a236" transform="rotate(42 70 51)"/>
-      <ellipse cx="56" cy="75" rx="8" ry="18" fill="#d5a236" transform="rotate(27 56 75)"/>
-      <ellipse cx="48" cy="101" rx="8" ry="18" fill="#d5a236" transform="rotate(10 48 101)"/>
-      <ellipse cx="48" cy="128" rx="8" ry="18" fill="#d5a236" transform="rotate(-8 48 128)"/>
-      <ellipse cx="55" cy="155" rx="8" ry="18" fill="#d5a236" transform="rotate(-25 55 155)"/>
-      <ellipse cx="68" cy="181" rx="8" ry="18" fill="#d5a236" transform="rotate(-42 68 181)"/>
+    <g id="laurelSide" fill="#d5a236" stroke="#d5a236" stroke-linejoin="round">
+      <path d="M78 42C48 78 47 142 72 204" fill="none" stroke-width="4" stroke-linecap="round"/>
+      <path d="M75 52C64 47 51 52 42 65C57 68 69 63 75 52Z"/>
+      <path d="M61 77C50 73 38 81 33 95C47 96 58 90 61 77Z"/>
+      <path d="M55 105C43 103 34 114 32 129C46 127 55 119 55 105Z"/>
+      <path d="M58 134C46 136 39 150 43 164C56 159 63 149 58 134Z"/>
+      <path d="M68 162C57 168 54 183 62 195C73 187 77 175 68 162Z"/>
+      <path d="M82 186C72 196 75 211 88 219C95 207 94 195 82 186Z"/>
     </g>
   </defs>
   <rect x="8" y="8" width="744" height="234" fill="#fff" stroke="#ddb45a" stroke-width="2.5" filter="url(#softShadow)"/>
