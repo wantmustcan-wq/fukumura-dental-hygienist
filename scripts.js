@@ -9,6 +9,20 @@ const menuButton = document.querySelector("[data-menu-button]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const sections = document.querySelectorAll("[data-section]");
+const revealGroups = [
+  [".hero-copy", "reveal-from-left"],
+  [".lead-band p", "reveal-zoom"],
+  [".support-grid article", "reveal-zoom"],
+  [".flow-list li", "reveal-zoom"],
+  [".program-card", "reveal-from-left"],
+  [".program-list li", "reveal-from-left"],
+  [".profile-card", "reveal-from-right"],
+  [".profile-photo", "reveal-from-left"],
+  [".profile-text li", "reveal-from-right"],
+  [".metric", "reveal-zoom"],
+  [".contact-card", "reveal-zoom"],
+  [".contact-note", "reveal-zoom"],
+];
 
 const headerOffset = () => {
   const header = document.querySelector(".site-header");
@@ -55,6 +69,33 @@ const updateCurrentFromScroll = () => {
 window.addEventListener("scroll", updateCurrentFromScroll, { passive: true });
 window.addEventListener("resize", updateCurrentFromScroll);
 window.addEventListener("load", updateCurrentFromScroll);
+
+const revealTargets = [];
+revealGroups.forEach(([selector, className]) => {
+  document.querySelectorAll(selector).forEach((element, index) => {
+    element.classList.add("reveal-target", className);
+    element.style.setProperty("--reveal-delay", `${Math.min(index * 80, 360)}ms`);
+    revealTargets.push(element);
+  });
+});
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.16,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
 
 menuButton?.addEventListener("click", () => {
   body.classList.toggle("menu-open");
