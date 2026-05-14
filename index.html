@@ -11,98 +11,195 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="mockup-site" aria-label="FUKUMURA Dental Hygienist ホームページ">
-    <picture>
-      <source srcset="assets/mockup-mobile.png" media="(max-width: 800px)">
-      <img class="mockup-image" src="assets/mockup-desktop.png" alt="FUKUMURA Dental Hygienist ホームページデザイン">
-    </picture>
-
-    <header class="header-fix" aria-label="サイトヘッダー">
-      <a class="site-logo" href="#top" aria-label="FUKUMURA ホームへ">
-        <img src="assets/site-logo-header.png" alt="FUKUMURA DENTAL HYGIENIST">
-      </a>
-      <nav class="header-menu" aria-label="メインメニュー">
-        <a class="is-current" href="#top"><strong>HOME</strong><span>ホーム</span></a>
-        <a href="#service"><strong>SERVICE</strong><span>サービス</span></a>
-        <a href="#flow"><strong>FLOW</strong><span>流れ</span></a>
-        <a href="#profile"><strong>PROFILE</strong><span>プロフィール</span></a>
-        <a href="#contact"><strong>CONTACT</strong><span>お問い合わせ</span></a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-phone" href="tel:09049925821">090-4992-5821</a>
-        <button class="header-mail" type="button" data-open-form>メールでのお問い合わせ</button>
-      </div>
-      <button class="mobile-menu-button" type="button" aria-label="メニュー">
-        <span></span><span></span><span></span>
-        <em>メニュー</em>
-      </button>
-    </header>
-
-    <div class="hero-metrics-cover" aria-hidden="true">
-      <p>
-        <span>学校・自治体・企業・地域集会へ伺い、</span>
-        <span>家族の歯の健康を守る実践的な健口づくりをお手伝いします。</span>
-      </p>
+  <header class="site-header" aria-label="サイトヘッダー">
+    <a class="site-logo" href="#top" data-nav-link="top" aria-label="FUKUMURA ホームへ">
+      <img src="assets/site-logo-header.png" alt="FUKUMURA DENTAL HYGIENIST">
+    </a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a class="is-current" href="#top" data-nav-link="top"><strong>HOME</strong><span>ホーム</span></a>
+      <a href="#service" data-nav-link="service"><strong>SERVICE</strong><span>サービス</span></a>
+      <a href="#flow" data-nav-link="flow"><strong>FLOW</strong><span>流れ</span></a>
+      <a href="#profile" data-nav-link="profile"><strong>PROFILE</strong><span>プロフィール</span></a>
+      <a href="#contact" data-nav-link="contact"><strong>CONTACT</strong><span>お問い合わせ</span></a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-pill" href="tel:09049925821"><span>TEL</span>090-4992-5821</a>
+      <button class="header-pill" type="button" data-open-form><span>MAIL</span>メールでのお問い合わせ</button>
     </div>
+    <button class="mobile-menu-button" type="button" aria-label="メニューを開く" data-menu-button>
+      <span></span><span></span><span></span>
+      <em>メニュー</em>
+    </button>
+  </header>
 
-    <section class="lecture-fix" aria-hidden="true">
-      <span class="section-kicker">PROGRAM</span>
-      <h2>講座内容</h2>
-      <p class="lecture-lead">対象や会場に合わせて、家庭で続けやすい口腔ケアをわかりやすく整理します。</p>
-      <ul>
-        <li>歯みがき習慣</li>
-        <li>むし歯・歯周病予防</li>
-        <li>食事とお口の健康</li>
-        <li>フレイル予防</li>
-        <li>子どもの口腔ケア</li>
-      </ul>
+  <nav class="mobile-nav" aria-label="スマートフォンメニュー" data-mobile-nav>
+    <a href="#top" data-nav-link="top">ホーム</a>
+    <a href="#service" data-nav-link="service">サービス</a>
+    <a href="#flow" data-nav-link="flow">流れ</a>
+    <a href="#profile" data-nav-link="profile">プロフィール</a>
+    <a href="#contact" data-nav-link="contact">お問い合わせ</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero section-panel" data-section="top">
+      <div class="hero-copy">
+        <p class="hero-line"></p>
+        <h1>安心して相談できる<br><span>地域の健口サポート</span></h1>
+        <p class="hero-text">歯科衛生士が学校・自治体・企業・地域集会へ伺い、<br>毎日の食事と歯みがきで家族の歯の健康を守る方法を、<br>わかりやすく楽しくお届けします。</p>
+      </div>
     </section>
 
-    <div class="profile-badges-fix" aria-hidden="true">
-      <div class="profile-metric">
-        <span>年間PMTC実施件数</span>
-        <strong>300件</strong>
+    <section class="lead-band" aria-label="活動方針">
+      <p><span>学校・自治体・企業・地域集会へ伺い、</span><span>家族の歯の健康を守る実践的な健口づくりをお手伝いします。</span></p>
+    </section>
+
+    <section id="service" class="support-section section-panel" data-section="service">
+      <div class="section-title dark">
+        <h2>5つのサポート</h2>
       </div>
-      <div class="profile-metric">
-        <span>歯科衛生士 臨床経験</span>
-        <strong>15年</strong>
+      <div class="support-grid">
+        <article>
+          <span class="round-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M45 9l10 5-25 56-10-5zM26 16l11 5M22 26l11 5M18 36l11 5"/></svg>
+          </span>
+          <h3>口腔ケア教育</h3>
+          <p>正しい歯みがきやデンタルケア習慣をわかりやすく指導します。</p>
+        </article>
+        <article>
+          <span class="round-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M24 12v56M18 12v22c0 8 12 8 12 0V12M50 12v56M50 12c10 6 12 24 0 34"/></svg>
+          </span>
+          <h3>食事と歯の健康</h3>
+          <p>食事とむし歯・歯周病の関係を学び、家族の健康をサポートします。</p>
+        </article>
+        <article>
+          <span class="round-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M28 42a12 12 0 1 0-1-1M52 42a12 12 0 1 0-1-1M16 65c3-10 12-16 24-16s21 6 24 16M40 22a10 10 0 1 0 0-1"/></svg>
+          </span>
+          <h3>子どもの発育支援</h3>
+          <p>子どもの発育やフレイル予防、未来の少子高齢化対策へつなげます。</p>
+        </article>
+        <article>
+          <span class="round-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M23 68h34V21H23zM31 21V11h18v10M31 33h6M43 33h6M31 45h6M43 45h6M31 57h6M43 57h6"/></svg>
+          </span>
+          <h3>地域・団体向け</h3>
+          <p>学校・自治体・企業・地域集会などへ出張し、講座を実施します。</p>
+        </article>
+        <article>
+          <span class="round-icon" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M40 66S17 52 17 32c0-9 7-16 16-16 4 0 7 2 7 2s3-2 7-2c9 0 16 7 16 16 0 20-23 34-23 34z"/></svg>
+          </span>
+          <h3>継続的なサポート</h3>
+          <p>講座後のフォローやご相談により、継続的な健康づくりを支えます。</p>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <nav class="hotspots" aria-label="ページ内メニュー">
-      <a class="hotspot logo" href="#top">トップへ</a>
-      <a class="hotspot nav-home" href="#top">ホーム</a>
-      <a class="hotspot nav-service" href="#service">サービス</a>
-      <a class="hotspot nav-flow" href="#flow">流れ</a>
-      <a class="hotspot nav-profile" href="#profile">プロフィール</a>
-      <a class="hotspot nav-contact" href="#contact">お問い合わせ</a>
-      <a class="hotspot phone-top" href="tel:09049925821">電話する</a>
-    </nav>
+    <section id="flow" class="flow-section section-panel" data-section="flow">
+      <div class="section-title">
+        <h2>導入までの流れ</h2>
+      </div>
+      <ol class="flow-list">
+        <li>
+          <span class="step-num">01</span>
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M16 22h34v25H29L16 58V22zM49 33h15v24h-9l-8 8"/></svg></span>
+          <h3>お問い合わせ</h3>
+          <p>お電話・メールからお気軽にご連絡ください。</p>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M24 18h32v48H24zM31 28h18M31 39h18M31 50h12M32 14h16v8H32z"/></svg></span>
+          <h3>ヒアリング</h3>
+          <p>対象者・目的・ご希望内容を丁寧にお伺いします。</p>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M20 22h40v42H20zM20 34h40M30 16v12M50 16v12M29 43h5M39 43h5M49 43h5M29 53h5M39 53h5M49 53h5"/></svg></span>
+          <h3>ご提案・日程調整</h3>
+          <p>最適な内容と日程をご提案・調整します。</p>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M18 18h32v24H18zM26 62V45M34 62V45M42 62V45M58 51a8 8 0 1 0 0-1M48 69c2-7 7-11 14-11s12 4 14 11"/></svg></span>
+          <h3>講座の実施</h3>
+          <p>楽しく分かりやすい講座を実施します。</p>
+        </li>
+        <li>
+          <span class="step-num">05</span>
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M22 60h42M28 55V42M40 55V30M52 55V20M25 35l12-10 10 8 15-18"/></svg></span>
+          <h3>フォロー・継続支援</h3>
+          <p>実施後のサポートやご相談も対応します。</p>
+        </li>
+      </ol>
+    </section>
 
-    <div id="top" class="anchor top-anchor"></div>
-    <div id="service" class="anchor service-anchor"></div>
-    <div id="flow" class="anchor flow-anchor"></div>
-    <div id="profile" class="anchor profile-anchor"></div>
-    <div id="contact" class="anchor contact-anchor"></div>
+    <section id="profile" class="program-profile-section section-panel" data-section="profile">
+      <div class="program-card">
+        <p class="section-kicker">PROGRAM</p>
+        <h2>講座内容</h2>
+        <p class="lecture-lead">対象や会場に合わせて、家庭で続けやすい口腔ケアをわかりやすく整理します。</p>
+        <ul class="program-list">
+          <li>歯みがき習慣</li>
+          <li>むし歯・歯周病予防</li>
+          <li>食事とお口の健康</li>
+          <li>フレイル予防</li>
+          <li>子どもの口腔ケア</li>
+        </ul>
+      </div>
+      <article class="profile-card">
+        <div class="profile-heading">
+          <h2>プロフィール</h2>
+        </div>
+        <div class="profile-body">
+          <figure class="profile-photo">
+            <img src="assets/profile-cutout.png" alt="歯科衛生士 譜久村 愛理">
+          </figure>
+          <div class="profile-text">
+            <h3>譜久村 愛理</h3>
+            <p class="profile-role">歯科衛生士</p>
+            <ul>
+              <li>4児母</li>
+              <li>歯科衛生士15年の臨床経験</li>
+              <li>医療法人徳歯会 在籍中</li>
+              <li>歯科衛生士専門学校 講師経験あり</li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile-metrics">
+          <div class="metric">
+            <span>年間PMTC実施件数</span>
+            <strong>300件</strong>
+          </div>
+          <div class="metric">
+            <span>歯科衛生士 臨床経験</span>
+            <strong>15年</strong>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <div class="contact-cards-fix">
-      <a class="contact-card contact-phone-card" href="tel:09049925821">
-        <span class="contact-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 80 80"><path d="M28 17l8 15-7 5c5 10 13 18 24 24l5-7 15 8c-2 9-8 14-17 13C31 70 11 50 7 25 6 16 19 10 28 17z"/></svg>
-        </span>
-        <span class="form-label">お電話でのお問い合わせ</span>
-        <strong>090-4992-5821</strong>
-        <small>受付時間 9:00〜18:00</small>
-      </a>
-      <button class="contact-card contact-mail-card" type="button" data-open-form>
-        <span class="contact-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 80 80"><path d="M14 22h52v36H14zM14 24l26 21 26-21"/></svg>
-        </span>
-        <span class="form-label">メールでのお問い合わせ</span>
-        <strong>入力フォームを開く</strong>
-        <small>24時間受付</small>
-      </button>
-    </div>
+    <section id="contact" class="contact-section section-panel" data-section="contact">
+      <div class="section-title dark">
+        <h2>お問い合わせ</h2>
+        <p>お気軽にご相談ください</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:09049925821">
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M28 17l8 15-7 5c5 10 13 18 24 24l5-7 15 8c-2 9-8 14-17 13C31 70 11 50 7 25 6 16 19 10 28 17z"/></svg></span>
+          <span>お電話でのお問い合わせ</span>
+          <strong>090-4992-5821</strong>
+          <small>受付時間 9:00〜18:00</small>
+        </a>
+        <button class="contact-card" type="button" data-open-form>
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><path d="M14 22h52v36H14zM14 24l26 21 26-21"/></svg></span>
+          <span>メールでのお問い合わせ</span>
+          <strong>入力フォームを開く</strong>
+          <small>24時間受付</small>
+        </button>
+      </div>
+      <p class="contact-note">対応エリア：沖縄本島全域（離島はご相談ください）　対象：学校・自治体・企業・地域集会・PTA・子育てサークル など</p>
+    </section>
   </main>
 
   <div class="form-modal" data-modal aria-hidden="true">
