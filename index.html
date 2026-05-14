@@ -3,195 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FUKUMURA Dental Hygienist | 沖縄の口腔ケア講座・健口サポート</title>
-  <meta name="description" content="歯科衛生士による沖縄の口腔ケア講座。学校・自治体・企業・地域集会向けに、家庭で続けられる健口習慣をわかりやすく届けます。">
-  <meta property="og:title" content="FUKUMURA Dental Hygienist">
-  <meta property="og:description" content="毎日の食事と歯みがきで、自分と家族の歯の健康を守る方法を届けます。">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero-bg-enhanced.png">
+  <title>FUKUMURA Dental Hygienist | 地域の健口サポート</title>
+  <meta name="description" content="歯科衛生士による学校・自治体・企業向けの健口講座、口腔ケア教育、相談対応サービスです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" data-header>
-    <a class="brand" href="#home" aria-label="FUKUMURA ホーム">
-      <img src="assets/logo.png" alt="FUKUMURA Dental Hygienist">
-      <span>
-        <strong>FUKUMURA</strong>
-        <small>DENTAL HYGIENIST</small>
-      </span>
-    </a>
-    <nav class="global-nav" aria-label="主要メニュー">
-      <a href="#home">HOME<small>ホーム</small></a>
-      <a href="#service">SERVICE<small>サービス</small></a>
-      <a href="#flow">FLOW<small>流れ</small></a>
-      <a href="#profile">PROFILE<small>プロフィール</small></a>
-      <a href="#contact">CONTACT<small>お問い合わせ</small></a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-btn phone" href="tel:09049925821" aria-label="電話する">
-        <span class="round-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 4.8 9.7 9c.4.7.3 1.5-.3 2.1l-1 1c1.4 2.5 3.1 4.2 5.6 5.6l1-1c.6-.6 1.4-.7 2.1-.3l4.2 2.5c.7.4 1 1.2.8 2-.3 1.1-1.4 2.1-2.6 2.1C9.4 23 1 14.6 1 4.5 1 3.3 2 2.3 3.1 2c.8-.2 1.6.1 2 .8Z"/></svg>
-        </span>
-        <span>090-4992-5821</span>
+  <main class="mockup-site" aria-label="FUKUMURA Dental Hygienist ホームページ">
+    <picture>
+      <source srcset="assets/mockup-mobile.png" media="(max-width: 800px)">
+      <img class="mockup-image" src="assets/mockup-desktop.png" alt="FUKUMURA Dental Hygienist ホームページデザイン">
+    </picture>
+
+    <header class="header-fix" aria-label="サイトヘッダー">
+      <a class="site-logo" href="#top" aria-label="FUKUMURA ホームへ">
+        <img src="assets/site-logo-header.png" alt="FUKUMURA DENTAL HYGIENIST">
       </a>
-      <a class="header-btn dm" href="#contact">
-        <span class="round-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.2"/><circle cx="16.8" cy="7.3" r="1.1"/></svg>
-        </span>
-        <span>Instagram DM</span>
-      </a>
+      <nav class="header-menu" aria-label="メインメニュー">
+        <a class="is-current" href="#top"><strong>HOME</strong><span>ホーム</span></a>
+        <a href="#service"><strong>SERVICE</strong><span>サービス</span></a>
+        <a href="#flow"><strong>FLOW</strong><span>流れ</span></a>
+        <a href="#profile"><strong>PROFILE</strong><span>プロフィール</span></a>
+        <a href="#contact"><strong>CONTACT</strong><span>お問い合わせ</span></a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:09049925821">090-4992-5821</a>
+        <button class="header-mail" type="button" data-open-form>メールでのお問い合わせ</button>
+      </div>
+      <button class="mobile-menu-button" type="button" aria-label="メニュー">
+        <span></span><span></span><span></span>
+        <em>メニュー</em>
+      </button>
+    </header>
+
+    <div class="hero-metrics-cover" aria-hidden="true">
+      <p>
+        <span>学校・自治体・企業・地域集会へ伺い、</span>
+        <span>家族の歯の健康を守る実践的な健口づくりをお手伝いします。</span>
+      </p>
     </div>
-    <button class="menu-toggle" type="button" aria-label="メニューを開く" data-menu-toggle>
-      <span></span><span></span><span></span>
-    </button>
-  </header>
 
-  <main>
-    <section class="hero section-full" id="home">
-      <div class="hero-bg" aria-hidden="true">
-        <span style="--slide-image:url('assets/hero-bg-enhanced.png')"></span>
-        <span style="--slide-image:url('assets/seminar.png')"></span>
-        <span style="--slide-image:url('assets/family.png')"></span>
-        <span style="--slide-image:url('assets/lecture.png')"></span>
-      </div>
-      <div class="hero-wash" aria-hidden="true"></div>
-      <div class="hero-band" aria-hidden="true"></div>
-      <div class="hero-copy" data-reveal>
-        <p class="eyebrow">ORAL CARE SUPPORT</p>
-        <h1>安心して相談できる<br><em>地域の健口サポート</em></h1>
-        <p class="lead"><span>歯科衛生士が学校・自治体・企業へ伺い、</span><span>地域集会にも対応。</span><span>毎日の食事と歯みがきで</span><span>家族の歯の健康を守る方法を、</span><span>わかりやすく楽しく届けます。</span></p>
-        <div class="hero-links">
-          <a class="primary-link" href="#service">サービスを見る</a>
-          <a class="text-link" href="#contact">相談する</a>
-        </div>
-      </div>
-      <span class="scroll-label">SCROLL</span>
+    <section class="lecture-fix" aria-hidden="true">
+      <span class="section-kicker">PROGRAM</span>
+      <h2>講座内容</h2>
+      <p class="lecture-lead">対象や会場に合わせて、家庭で続けやすい口腔ケアをわかりやすく整理します。</p>
+      <ul>
+        <li>歯みがき習慣</li>
+        <li>むし歯・歯周病予防</li>
+        <li>食事とお口の健康</li>
+        <li>フレイル予防</li>
+        <li>子どもの口腔ケア</li>
+      </ul>
     </section>
 
-    <section class="content-section" id="service">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">SERVICE</p>
-        <h2>FUKUMURAの5つのサポート</h2>
-        <p>対象者や会場に合わせて、講座・相談・家庭実践までつながる内容に整えます。</p>
+    <div class="profile-badges-fix" aria-hidden="true">
+      <div class="profile-metric">
+        <span>年間PMTC実施件数</span>
+        <strong>300件</strong>
       </div>
-      <div class="service-grid">
-        <article class="service-card" data-reveal>
-          <span class="num">01</span>
-          <div class="icon-box seminar" aria-hidden="true"></div>
-          <h3>健康セミナー</h3>
-          <p>口腔ケアを楽しく学べる講座。発育、食事、歯みがき、フレイル予防までわかりやすく伝えます。</p>
-        </article>
-        <article class="service-card" data-reveal>
-          <span class="num">02</span>
-          <div class="icon-box home-care" aria-hidden="true"></div>
-          <h3>家庭での健口実践法</h3>
-          <p>家庭ですぐ続けられる歯ブラシ選び、仕上げみがき、食習慣の整え方を具体的に提案します。</p>
-        </article>
-        <article class="service-card" data-reveal>
-          <span class="num">03</span>
-          <div class="icon-box consult" aria-hidden="true"></div>
-          <h3>質疑相談対応</h3>
-          <p>講座後の疑問や、家族ごとの困りごとに対応。次の行動が見える相談時間を設けます。</p>
-        </article>
-        <article class="service-card" data-reveal>
-          <span class="num">04</span>
-          <div class="icon-box check" aria-hidden="true"></div>
-          <h3>健康チェック</h3>
-          <p>お口の状態と生活習慣を見直し、日々のケアで気をつけたいポイントを整理します。</p>
-        </article>
-        <article class="service-card" data-reveal>
-          <span class="num">05</span>
-          <div class="icon-box prevention" aria-hidden="true"></div>
-          <h3>予防サポート</h3>
-          <p>子どもの発育、成人の歯周病予防、高齢期のフレイル予防まで、世代に応じた支援を行います。</p>
-        </article>
+      <div class="profile-metric">
+        <span>歯科衛生士 臨床経験</span>
+        <strong>15年</strong>
       </div>
-      <div class="info-strip" data-reveal>
-        <div><b>対象</b><span>学校・自治体イベント・地域集会・企業研修</span></div>
-        <div><b>内容</b><span>発育と全身健康の講演、家庭での健口実践法</span></div>
-        <div><b>費用</b><span>依頼先と要相談</span></div>
-      </div>
-    </section>
+    </div>
 
-    <section class="content-section tinted" id="flow">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">FLOW</p>
-        <h2>サービス導入までの流れ</h2>
-        <p>内容を確認してから問い合わせ、開催準備、講座実施、相談対応までスムーズに進めます。</p>
-      </div>
-      <div class="flow-grid">
-        <article class="flow-card" data-reveal><span>01</span><h3>お問い合わせ</h3><p>開催希望日、対象者、人数、会場のイメージをお知らせください。</p></article>
-        <article class="flow-card" data-reveal><span>02</span><h3>ヒアリング</h3><p>地域や参加者の課題を伺い、講座の目的とゴールを整理します。</p></article>
-        <article class="flow-card" data-reveal><span>03</span><h3>内容調整</h3><p>学校、自治体、企業など会場に合わせてテーマと時間配分を決めます。</p></article>
-        <article class="flow-card" data-reveal><span>04</span><h3>講座実施</h3><p>健口講座40分を目安に、実践しやすい内容でお届けします。</p></article>
-        <article class="flow-card" data-reveal><span>05</span><h3>質疑相談</h3><p>15分程度の相談時間で、家庭や現場での疑問にお答えします。</p></article>
-      </div>
-    </section>
+    <nav class="hotspots" aria-label="ページ内メニュー">
+      <a class="hotspot logo" href="#top">トップへ</a>
+      <a class="hotspot nav-home" href="#top">ホーム</a>
+      <a class="hotspot nav-service" href="#service">サービス</a>
+      <a class="hotspot nav-flow" href="#flow">流れ</a>
+      <a class="hotspot nav-profile" href="#profile">プロフィール</a>
+      <a class="hotspot nav-contact" href="#contact">お問い合わせ</a>
+      <a class="hotspot phone-top" href="tel:09049925821">電話する</a>
+    </nav>
 
-    <section class="content-section compact" id="program">
-      <div class="section-head split" data-reveal>
-        <div>
-          <p class="eyebrow">PROGRAM</p>
-          <h2>講座内容</h2>
-        </div>
-        <p>歯の健康を入り口に、食事、発育、全身健康、未来の予防につながる講座を構成します。</p>
-      </div>
-      <div class="program-panel" data-reveal>
-        <div class="program-item"><span>40分</span><h3>健口講座</h3><p>子どもから高齢者まで、対象に合わせて伝わる内容に調整します。</p></div>
-        <div class="program-item"><span>15分</span><h3>質疑相談</h3><p>歯みがき、食事、習慣づくりの疑問をその場で相談できます。</p></div>
-        <div class="program-item"><span>相談</span><h3>場所・費用</h3><p>地域集会所や学校など、依頼先と相談しながら決めていきます。</p></div>
-      </div>
-    </section>
+    <div id="top" class="anchor top-anchor"></div>
+    <div id="service" class="anchor service-anchor"></div>
+    <div id="flow" class="anchor flow-anchor"></div>
+    <div id="profile" class="anchor profile-anchor"></div>
+    <div id="contact" class="anchor contact-anchor"></div>
 
-    <section class="content-section profile-section" id="profile">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">PROFILE</p>
-        <h2>譜久村 愛理</h2>
-        <p>臨床経験と講師経験、そして生活者としての視点を活かし、地域の場に合わせた口腔ケア教育を行います。</p>
-      </div>
-      <div class="profile-panel" data-reveal>
-        <div class="profile-copy">
-          <p class="role">DENTAL HYGIENIST / ORAL CARE SEMINAR</p>
-          <h3>歯科衛生士として、家庭で続く健口習慣を届けます。</h3>
-          <p>沖縄県の健康長寿を復活させるため、学校・自治体・企業と連携して口腔ケア教育を展開。子どもの発育、フレイル予防、未来の少子高齢化対策へつなぐ土台づくりを目指します。</p>
-          <div class="profile-tags"><span>4児母</span><span>医療法人徳歯会在籍中</span><span>専門学校講師経験あり</span><span>家庭での健口実践法</span></div>
-          <div class="achievement-row">
-            <div class="achievement-card"><img src="assets/achievement-pmtc-hq.png" alt="年間PMTC実施件数 300件"></div>
-            <div class="achievement-card"><img src="assets/achievement-years-hq.png" alt="歯科衛生士 臨床経験 15年"></div>
-          </div>
-        </div>
-        <div class="profile-photo"><img src="assets/profile-cutout.png" alt="譜久村 愛理"></div>
-      </div>
-    </section>
-
-    <section class="content-section contact-section" id="contact">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">CONTACT</p>
-        <h2><span>講座のご相談・ご依頼は</span><span><em>Instagram DM</em></span><span><em>またはお電話で。</em></span></h2>
-        <p>対象、人数、場所、希望日が未定でも相談できます。まずは開催したい内容や目的をお聞かせください。</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card" data-reveal>
-          <a class="contact-method" href="tel:09049925821"><span class="contact-icon phone"></span><b>お電話</b><strong>090-4992-5821</strong></a>
-          <a class="contact-method" href="mailto:goyamya4@gmail.com"><span class="contact-icon mail"></span><b>メール</b><strong>goyamya4@gmail.com</strong></a>
-          <a class="contact-method" href="#contact"><span class="contact-icon dm"></span><b>Instagram DM</b><strong>QRコードからアクセス</strong></a>
-        </div>
-        <div class="qr-card" data-reveal>
-          <div>
-            <p class="eyebrow">INSTAGRAM</p>
-            <h3>DMで相談する</h3>
-            <p>スマートフォンからQRコードを読み取って、お問い合わせいただけます。</p>
-          </div>
-          <img src="assets/instagram-qr-transparent.png" alt="Instagram QRコード">
-        </div>
-      </div>
-    </section>
+    <div class="contact-cards-fix">
+      <a class="contact-card contact-phone-card" href="tel:09049925821">
+        <span class="contact-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><path d="M28 17l8 15-7 5c5 10 13 18 24 24l5-7 15 8c-2 9-8 14-17 13C31 70 11 50 7 25 6 16 19 10 28 17z"/></svg>
+        </span>
+        <span class="form-label">お電話でのお問い合わせ</span>
+        <strong>090-4992-5821</strong>
+        <small>受付時間 9:00〜18:00</small>
+      </a>
+      <button class="contact-card contact-mail-card" type="button" data-open-form>
+        <span class="contact-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><path d="M14 22h52v36H14zM14 24l26 21 26-21"/></svg>
+        </span>
+        <span class="form-label">メールでのお問い合わせ</span>
+        <strong>入力フォームを開く</strong>
+        <small>24時間受付</small>
+      </button>
+    </div>
   </main>
 
-  <footer class="footer">
-    <small>&copy; FUKUMURA Dental Hygienist.</small>
-    <a href="#home">PAGE TOP</a>
-  </footer>
+  <div class="form-modal" data-modal aria-hidden="true">
+    <div class="modal-backdrop" data-close-form></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="form-title">
+      <button class="modal-close" type="button" aria-label="閉じる" data-close-form>×</button>
+      <div class="form-state form-input-state" data-input-state>
+        <p class="modal-kicker">CONTACT FORM</p>
+        <h2 id="form-title">メールでのお問い合わせ</h2>
+        <form class="contact-form" data-contact-form>
+          <label>
+            <span>お名前</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            <span>メールアドレス</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>電話番号</span>
+            <input name="tel" type="tel" autocomplete="tel">
+          </label>
+          <label>
+            <span>お問い合わせ内容</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="submit-button" type="submit">送信する</button>
+        </form>
+      </div>
+      <div class="form-state thanks-state" data-thanks-state hidden>
+        <p class="modal-kicker">THANK YOU</p>
+        <h2>送信ありがとうございました</h2>
+        <p>内容を確認後、折り返しご連絡いたします。しばらくお待ちください。</p>
+        <button class="submit-button" type="button" data-close-form>閉じる</button>
+      </div>
+    </section>
+  </div>
 
   <script src="scripts.js"></script>
 </body>
