@@ -5,6 +5,66 @@ const closeButtons = document.querySelectorAll("[data-close-form]");
 const form = document.querySelector("[data-contact-form]");
 const inputState = document.querySelector("[data-input-state]");
 const thanksState = document.querySelector("[data-thanks-state]");
+const menuButton = document.querySelector("[data-menu-button]");
+const mobileNav = document.querySelector("[data-mobile-nav]");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const sections = document.querySelectorAll("[data-section]");
+
+const headerOffset = () => {
+  const header = document.querySelector(".site-header");
+  return (header?.getBoundingClientRect().height || 0) + 12;
+};
+
+const setCurrentNav = (id) => {
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-current", link.dataset.navLink === id);
+  });
+};
+
+const scrollToSection = (id) => {
+  const target = id === "top" ? document.body : document.getElementById(id);
+  if (!target) return;
+  const top = id === "top" ? 0 : target.getBoundingClientRect().top + window.scrollY - headerOffset();
+  window.scrollTo({ top, behavior: "smooth" });
+  setCurrentNav(id);
+  body.classList.remove("menu-open");
+};
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const id = link.dataset.navLink;
+    if (!id) return;
+    event.preventDefault();
+    history.replaceState(null, "", id === "top" ? "#top" : `#${id}`);
+    scrollToSection(id);
+  });
+});
+
+const updateCurrentFromScroll = () => {
+  const marker = window.scrollY + headerOffset() + 80;
+  let current = "top";
+  sections.forEach((section) => {
+    if (section.offsetTop <= marker) {
+      current = section.dataset.section;
+    }
+  });
+  if (window.scrollY < 80) current = "top";
+  setCurrentNav(current);
+};
+
+window.addEventListener("scroll", updateCurrentFromScroll, { passive: true });
+window.addEventListener("resize", updateCurrentFromScroll);
+window.addEventListener("load", updateCurrentFromScroll);
+
+menuButton?.addEventListener("click", () => {
+  body.classList.toggle("menu-open");
+});
+
+mobileNav?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    body.classList.remove("menu-open");
+  }
+});
 
 const openModal = () => {
   modal.classList.add("is-open");
@@ -41,8 +101,9 @@ form.addEventListener("submit", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && modal.classList.contains("is-open")) {
-    closeModal();
+  if (event.key === "Escape") {
+    if (modal.classList.contains("is-open")) closeModal();
+    body.classList.remove("menu-open");
   }
 });
 
@@ -54,4 +115,11 @@ if (previewParams.has("thanks") || window.location.hash === "#thanks-preview") {
 
 if (previewParams.has("form") || window.location.hash === "#form-preview") {
   window.addEventListener("load", openModal);
+}
+
+if (window.location.hash && !window.location.hash.includes("preview")) {
+  window.addEventListener("load", () => {
+    const id = window.location.hash.replace("#", "");
+    if (id) window.setTimeout(() => scrollToSection(id), 120);
+  });
 }
