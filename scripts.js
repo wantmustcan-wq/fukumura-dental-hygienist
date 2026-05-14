@@ -1,57 +1,57 @@
-const header = document.querySelector("[data-header]");
-const toggle = document.querySelector("[data-menu-toggle]");
-const navLinks = [...document.querySelectorAll(".global-nav a")];
-document.documentElement.classList.add("has-js");
+const body = document.body;
+const modal = document.querySelector("[data-modal]");
+const openButtons = document.querySelectorAll("[data-open-form]");
+const closeButtons = document.querySelectorAll("[data-close-form]");
+const form = document.querySelector("[data-contact-form]");
+const inputState = document.querySelector("[data-input-state]");
+const thanksState = document.querySelector("[data-thanks-state]");
 
-toggle?.addEventListener("click", () => {
-  header?.classList.toggle("is-open");
+const openModal = () => {
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  body.classList.add("modal-open");
+  inputState.hidden = false;
+  thanksState.hidden = true;
+  const firstInput = modal.querySelector("input");
+  window.setTimeout(() => firstInput?.focus(), 80);
+};
+
+const showThanks = () => {
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  body.classList.add("modal-open");
+  inputState.hidden = true;
+  thanksState.hidden = false;
+};
+
+const closeModal = () => {
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  body.classList.remove("modal-open");
+};
+
+openButtons.forEach((button) => button.addEventListener("click", openModal));
+closeButtons.forEach((button) => button.addEventListener("click", closeModal));
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  form.reset();
+  inputState.hidden = true;
+  thanksState.hidden = false;
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    header?.classList.remove("is-open");
-    navLinks.forEach((item) => item.classList.toggle("is-active", item === link));
-  });
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modal.classList.contains("is-open")) {
+    closeModal();
+  }
 });
 
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
+const previewParams = new URLSearchParams(window.location.search);
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-    if (!visible) return;
-    navLinks.forEach((link) => {
-      link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
-    });
-  },
-  { rootMargin: "-28% 0px -60% 0px", threshold: [0, .2, .45, .7] }
-);
+if (previewParams.has("thanks") || window.location.hash === "#thanks-preview") {
+  window.addEventListener("load", showThanks);
+}
 
-sections.forEach((section) => observer.observe(section));
-
-document.querySelector('.global-nav a[href="#home"]')?.classList.add("is-active");
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { rootMargin: "0px 0px -12% 0px", threshold: .15 }
-);
-
-document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
-
-setTimeout(() => {
-  document.querySelectorAll("[data-reveal]:not(.is-visible)").forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 1.12) el.classList.add("is-visible");
-  });
-}, 1200);
+if (previewParams.has("form") || window.location.hash === "#form-preview") {
+  window.addEventListener("load", openModal);
+}
