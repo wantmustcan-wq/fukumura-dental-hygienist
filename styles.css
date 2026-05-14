@@ -763,9 +763,9 @@ main {
   position: relative;
   min-height: 122px;
   display: grid;
-  grid-template-columns: 46px auto 46px;
+  grid-template-columns: 34px auto 34px;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
   align-items: center;
   text-align: center;
 }
@@ -776,8 +776,8 @@ main {
 }
 
 .metric-laurel {
-  width: 46px;
-  height: 116px;
+  width: 34px;
+  height: 104px;
   fill: rgba(222, 171, 82, .9);
   stroke: rgba(222, 171, 82, .9);
   stroke-linecap: round;
