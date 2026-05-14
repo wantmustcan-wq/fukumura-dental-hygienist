@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-label="口腔ケア講座のイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f4e7d6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#5b402a" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="820" height="560" rx="18" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="86" y="74" width="648" height="390" rx="14" fill="#fff" stroke="#d8b978" stroke-width="3"/>
+    <rect x="112" y="104" width="596" height="330" rx="8" fill="#fffaf1" stroke="#ecd9b6" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M169 330h130M490 330h126" stroke="#d8b978" stroke-width="8"/>
+    <path d="M220 162c26-22 72-20 92 8 28 39 2 111-46 111s-77-72-46-119Z" stroke="#5b402a" stroke-width="8"/>
+    <path d="M247 213c14 12 34 12 48 0M236 192h.1M304 192h.1" stroke="#5b402a" stroke-width="8"/>
+    <path d="M262 157c-3-29 18-50 48-52" stroke="#2aa7a0" stroke-width="8"/>
+    <path d="M458 153h148M458 205h116M458 257h170" stroke="#5b402a" stroke-width="8"/>
+    <path d="m424 149 16 16 28-34M424 201l16 16 28-34M424 253l16 16 28-34" stroke="#2aa7a0" stroke-width="8"/>
+    <path d="M177 381c42 30 106 32 151 0M475 384h151" stroke="#d88c95" stroke-width="7"/>
+  </g>
+  <g fill="#d8b978">
+    <circle cx="137" cy="139" r="8"/>
+    <circle cx="683" cy="388" r="8"/>
+    <circle cx="656" cy="139" r="6"/>
+  </g>
+  <path d="M109 484c68-46 145-43 217-16 97 37 183 28 266-16 56-30 103-33 143-6v114H109Z" fill="#d88c95" opacity=".25"/>
+</svg>
