@@ -847,11 +847,23 @@ main {
   .header-actions {
     display: none;
   }
+
+  .profile-flow {
+    grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr);
+  }
+
+  .profile-card.metrics-card {
+    grid-column: 1 / -1;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
   :root {
-    --header-h: 150px;
+    --header-h: 82px;
   }
 
   html,
@@ -898,25 +910,18 @@ main {
     height: var(--header-h);
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 10px 14px;
+    gap: 14px;
     align-content: center;
-    padding: 12px 18px;
+    padding: 10px 18px;
   }
 
   .site-logo {
     flex-basis: auto;
-    width: 220px;
+    width: min(220px, calc(100vw - 96px));
   }
 
   .site-nav {
-    grid-column: 1 / -1;
-    order: 3;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    gap: 6px;
+    display: none;
   }
 
   .site-nav a {
@@ -937,8 +942,8 @@ main {
   }
 
   .mobile-menu-button {
-    width: 54px;
-    height: 44px;
+    width: 58px;
+    height: 48px;
     display: grid;
     place-items: center;
     gap: 3px;
@@ -985,7 +990,7 @@ main {
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: 34px 22px 24px;
+    padding: 54px 22px 24px;
   }
 
   .hero-bg-soft {
@@ -1193,6 +1198,22 @@ main {
   .profile-text p:not(.label) {
     font-size: 13px;
     line-height: 1.9;
+  }
+
+  .profile-card.profile-text {
+    order: 1;
+  }
+
+  .profile-card.portrait-card {
+    order: 2;
+  }
+
+  .profile-card.metrics-card {
+    order: 3;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
   }
 
   .metric strong {
