@@ -99,11 +99,10 @@ figure {
 }
 
 .logo-mark img {
-  width: 96px;
-  height: 96px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   opacity: .92;
-  transform: translateY(2px);
 }
 
 .logo-text {
@@ -339,22 +338,6 @@ main {
   font-size: 17px;
   font-weight: 900;
   line-height: 2;
-}
-
-.hero-stamp {
-  position: absolute;
-  right: 90px;
-  bottom: 78px;
-  width: 118px;
-  height: 118px;
-  display: grid;
-  place-items: center;
-  color: rgba(242, 196, 107, .6);
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  font-family: Georgia, serif;
-  font-size: 42px;
-  font-style: italic;
 }
 
 .section-block {
@@ -622,19 +605,23 @@ main {
 }
 
 .profile-photo {
-  min-height: 286px;
+  min-height: 340px;
   display: grid;
-  place-items: end center;
+  place-items: center;
   padding: 18px;
   border: 1px solid rgba(216, 166, 81, .52);
   border-radius: 18px;
-  background: rgba(255, 255, 255, .08);
+  background: #d6cdbe;
+  overflow: hidden;
 }
 
 .profile-photo img {
-  width: 250px;
-  max-height: 262px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, .22));
 }
 
@@ -941,8 +928,8 @@ main {
   }
 
   .logo-mark img {
-    width: 66px;
-    height: 66px;
+    width: 30px;
+    height: 30px;
   }
 
   .logo-text {
@@ -1063,14 +1050,6 @@ main {
     overflow-wrap: anywhere;
   }
 
-  .hero-stamp {
-    right: 22px;
-    bottom: 28px;
-    width: 82px;
-    height: 82px;
-    font-size: 30px;
-  }
-
   .section-block {
     padding: 50px 18px 58px;
   }
@@ -1163,7 +1142,7 @@ main {
   .profile-photo {
     order: 2;
     width: min(100%, 320px);
-    min-height: 330px;
+    min-height: 390px;
     margin-inline: auto;
   }
 
