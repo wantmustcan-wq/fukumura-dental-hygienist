@@ -24,7 +24,7 @@ body {
   min-width: 320px;
   color: var(--ink);
   font-family: "Yu Gothic", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #21130c;
+  background: #eee5d8;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
@@ -248,7 +248,7 @@ main {
   width: min(100%, var(--max));
   margin: 0 auto;
   padding-top: var(--header-h);
-  background: var(--paper);
+  background: #eee5d8;
   box-shadow: 0 0 0 1px rgba(216, 166, 81, .14);
 }
 
@@ -395,14 +395,29 @@ main {
 }
 
 .service,
+.flow,
 .program {
-  background: linear-gradient(180deg, #5a371f, #3b2417);
+  background: #eee5d8;
 }
 
-.flow,
-.profile,
+.profile {
+  background: #3a2416;
+}
+
 .contact {
-  background: linear-gradient(180deg, #3b2417, #2e1a10);
+  background: linear-gradient(135deg, #3a2416, #6a452b);
+}
+
+.service .section-heading h2,
+.flow .section-heading h2,
+.program .section-heading h2 {
+  color: #3a2416;
+}
+
+.service .section-heading span,
+.flow .section-heading span,
+.program .section-heading span {
+  color: #5a3c28;
 }
 
 .support-grid {
@@ -420,9 +435,9 @@ main {
   gap: 12px;
   padding: 24px 18px;
   overflow: hidden;
-  color: #fff2dd;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .02));
-  border: 1px solid rgba(242, 196, 107, .46);
+  color: #3a2416;
+  background: #fffaf0;
+  border: 1px solid rgba(92, 57, 34, .18);
   border-radius: 18px;
   text-align: center;
 }
@@ -431,14 +446,14 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 0 43%, rgba(242, 196, 107, .1) 43% 52%, transparent 52%);
+  background: linear-gradient(135deg, transparent 0 43%, rgba(92, 57, 34, .06) 43% 52%, transparent 52%);
   pointer-events: none;
 }
 
 .icon {
   width: 68px;
   height: 68px;
-  color: #f2c46b;
+  color: #5c3922;
 }
 
 .icon svg {
@@ -461,7 +476,7 @@ main {
 .support-card h3 {
   position: relative;
   z-index: 1;
-  color: #fff2dd;
+  color: #3a2416;
   font-size: 18px;
   font-weight: 900;
   letter-spacing: .04em;
@@ -479,9 +494,9 @@ main {
 .flow-step {
   min-height: 156px;
   padding: 22px 17px;
-  color: #fff2dd;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .02));
-  border: 1px solid rgba(242, 196, 107, .46);
+  color: #3a2416;
+  background: #fffaf0;
+  border: 1px solid rgba(92, 57, 34, .18);
   border-radius: 18px;
   text-align: center;
 }
@@ -501,14 +516,14 @@ main {
 }
 
 .flow-step h3 {
-  color: #f2c46b;
+  color: #5c3922;
   font-size: 18px;
   font-weight: 900;
 }
 
 .flow-step p {
   margin-top: 10px;
-  color: #fff1dc;
+  color: #3a2416;
   font-size: 13px;
   font-weight: 800;
   line-height: 1.7;
@@ -527,9 +542,9 @@ main {
   gap: 22px;
   align-items: center;
   padding: 30px;
-  color: #fff2dd;
-  background: rgba(255, 255, 255, .06);
-  border: 1px solid rgba(242, 196, 107, .46);
+  color: #3a2416;
+  background: #fffaf0;
+  border: 1px solid rgba(92, 57, 34, .18);
   border-radius: 18px;
 }
 
@@ -539,8 +554,8 @@ main {
   display: grid;
   place-items: center;
   align-content: center;
-  color: #f2c46b;
-  background: rgba(255, 255, 255, .05);
+  color: #5c3922;
+  background: #fff7e6;
   border: 1px solid rgba(216, 166, 81, .65);
   border-radius: 50%;
   font-family: Georgia, "Yu Mincho", serif;
@@ -561,7 +576,7 @@ main {
 }
 
 .course-card h3 {
-  color: #f2c46b;
+  color: #5c3922;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
   font-size: 30px;
   font-weight: 900;
@@ -570,7 +585,7 @@ main {
 
 .course-card p {
   margin-top: 12px;
-  color: #fff1dc;
+  color: #3a2416;
   font-size: 15px;
   font-weight: 800;
   line-height: 1.9;
@@ -585,7 +600,7 @@ main {
 
 .course-tags span {
   padding: 7px 12px;
-  color: #f2c46b;
+  color: #5c3922;
   border: 1px solid rgba(216, 166, 81, .5);
   border-radius: 999px;
   font-size: 12px;
@@ -622,6 +637,8 @@ main {
   object-fit: cover;
   object-position: center center;
   border-radius: 10px;
+  transform: translateX(30px) scale(1.2);
+  transform-origin: center;
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, .22));
 }
 
