@@ -10,15 +10,10 @@ const mobileNav = document.querySelector("[data-mobile-nav]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const sections = document.querySelectorAll("[data-section]");
 const revealGroups = [
-  [".hero-copy", "reveal-from-left"],
-  [".lead-band p", "reveal-zoom"],
   [".support-grid article", "reveal-zoom"],
   [".flow-list li", "reveal-zoom"],
-  [".time-box", "reveal-zoom"],
-  [".program-list li", "reveal-from-left"],
-  [".profile-card", "reveal-zoom"],
-  [".portrait", "reveal-from-left"],
-  [".metric", "reveal-zoom"],
+  [".course-card", "reveal-from-left"],
+  [".profile-box", "reveal-zoom"],
   [".contact-card", "reveal-zoom"],
 ];
 
@@ -132,7 +127,7 @@ const closeModal = () => {
 openButtons.forEach((button) => button.addEventListener("click", openModal));
 closeButtons.forEach((button) => button.addEventListener("click", closeModal));
 
-form.addEventListener("submit", (event) => {
+form?.addEventListener("submit", (event) => {
   event.preventDefault();
   form.reset();
   inputState.hidden = true;
