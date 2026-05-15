@@ -14,18 +14,12 @@ const revealGroups = [
   [".lead-band p", "reveal-zoom"],
   [".support-grid article", "reveal-zoom"],
   [".flow-list li", "reveal-zoom"],
-  [".card-title-line", "reveal-zoom"],
-  [".program-card", "reveal-from-left"],
-  [".lecture-summary div", "reveal-zoom"],
+  [".time-box", "reveal-zoom"],
   [".program-list li", "reveal-from-left"],
-  [".profile-card", "reveal-from-right"],
-  [".profile-photo", "reveal-from-left"],
-  [".profile-text h2", "reveal-from-right"],
-  [".profile-intro", "reveal-from-right"],
-  [".profile-text li", "reveal-from-right"],
+  [".profile-card", "reveal-zoom"],
+  [".portrait", "reveal-from-left"],
   [".metric", "reveal-zoom"],
   [".contact-card", "reveal-zoom"],
-  [".contact-note", "reveal-zoom"],
 ];
 
 const headerOffset = () => {
