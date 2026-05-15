@@ -529,7 +529,7 @@ main {
 
 .profile-flow {
   display: grid;
-  grid-template-columns: 330px minmax(0, 1fr) 360px;
+  grid-template-columns: 360px minmax(0, 1fr);
   gap: 22px;
   margin-top: 52px;
   align-items: stretch;
@@ -544,20 +544,20 @@ main {
 }
 
 .profile-card.metrics-card {
-  display: grid;
-  align-content: center;
+  display: none;
 }
 
 .portrait {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 390px;
   margin: 0;
-  padding: 14px;
-  border: 2px solid transparent;
+  padding: 16px 16px 72px;
+  border: 1px solid rgba(216, 166, 81, .62);
   border-radius: 22px;
-  background:
-    linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(135deg, #a76927, #ffe9a4, #bd7c25) border-box;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 230, 173, .12);
 }
 
 .portrait img {
@@ -566,7 +566,48 @@ main {
   object-fit: contain;
   object-position: center bottom;
   border-radius: 12px;
-  background: #fff;
+  background: transparent;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, .22));
+}
+
+.portrait-badges {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.portrait-badges span {
+  min-height: 50px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  color: #ffdd9a;
+  border: 1px solid rgba(216, 166, 81, .52);
+  border-radius: 999px;
+  background: rgba(45, 26, 15, .78);
+  box-shadow: 0 10px 22px rgba(25, 13, 6, .22);
+  font-family: "Noto Serif JP", serif;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.portrait-badges small {
+  display: block;
+  color: rgba(255, 240, 205, .88);
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  font-size: 9px;
+  letter-spacing: .06em;
+}
+
+.portrait-badges b {
+  margin: 1px 1px 0 0;
+  font-size: 22px;
+  line-height: 1;
 }
 
 .profile-text .label {
@@ -851,14 +892,6 @@ main {
   .profile-flow {
     grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr);
   }
-
-  .profile-card.metrics-card {
-    grid-column: 1 / -1;
-  }
-
-  .metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 900px) {
@@ -986,34 +1019,40 @@ main {
   }
 
   .hero {
-    min-height: 720px;
-    display: block;
+    min-height: 660px;
+    display: grid;
+    align-items: center;
     width: 100%;
     max-width: 100%;
-    padding: 54px 22px 24px;
+    padding: 58px 22px 54px;
   }
 
   .hero-bg-soft {
+    height: 100%;
+    object-fit: cover;
     filter: blur(10px) saturate(.92);
-    opacity: .3;
+    opacity: .22;
   }
 
   .hero-bg {
-    height: 390px;
-    top: 278px;
-    bottom: auto;
-    object-fit: contain;
-    object-position: center bottom;
-    opacity: .9;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% center;
+    opacity: .82;
   }
 
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(255, 253, 248, .98) 0%, rgba(255, 253, 248, .96) 38%, rgba(255, 253, 248, .7) 66%, rgba(255, 253, 248, .96) 100%);
+      linear-gradient(90deg, rgba(255, 253, 248, .98) 0%, rgba(255, 253, 248, .9) 58%, rgba(255, 253, 248, .52) 100%),
+      linear-gradient(180deg, rgba(255, 253, 248, .92) 0%, rgba(255, 253, 248, .7) 48%, rgba(255, 253, 248, .92) 100%);
   }
 
   .hero-copy {
     max-width: none;
+    position: relative;
+    z-index: 1;
   }
 
   .eyebrow {
@@ -1040,7 +1079,7 @@ main {
 
   .hero-text {
     width: auto;
-    max-width: 100%;
+    max-width: 94%;
     margin-top: 18px;
     font-size: 13px;
     line-height: 1.85;
